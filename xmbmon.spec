@@ -48,6 +48,7 @@ Program do monitorowania p³yty g³ównej dla X Window System.
 %setup -q -n %{name}%{version}
 
 %build
+cp -f /usr/share/automake/config.sub AC-TOOLS/
 %{__aclocal}
 %{__autoconf}
 %configure
