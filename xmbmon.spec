@@ -1,6 +1,5 @@
-
 Summary:	Mother Board Monitor Program
-Summary(pl):	-
+Summary(pl):	Program do monitorowania p³yty g³ównej
 Name:		xmbmon
 Version:	203
 Release:	1
@@ -9,9 +8,9 @@ Group:		Tools
 Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}%{version}.tar.gz
 # Source0-md5:	f84e48b8e433170358cec840020b2419
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -19,30 +18,34 @@ Recent motherboards have functionalities to monitor the CPU
 temperatures and the frequency of CPU cooling fans etc. Although some
 programs utilizing these hardware monitoring facilities have been
 developed for the Microsoft Windows platforms, no programs seem to
-exist for PC-UNIX and the X Windows System platforms. Thus, I have
-tried to make small programs. They have only least functionalities,
-the one "mbmon" used at the command line reports the temperatures,
-voltages and rpm (rounds per minute) of cooling fans, and the other
-"xmbmon" displays the three temperatures and a core voltage as simple
-curves.
+exist for PC-UNIX and the X Window System platforms. These small
+programs have only least functionalities, the one "mbmon" used at the
+command line reports the temperatures, voltages and rpm (rounds per
+minute) of cooling fans, and the other "xmbmon" displays the three
+temperatures and a core voltage as simple curves.
 
 %description -l pl
-- -
+Nowe p³yty g³ówne maj± funkcjonalno¶æ monitorowania temperatur CPU,
+szybko¶ci wiatraczków ch³odz±cych CPU itp. Mimo ¿e powsta³y programy
+wykorzystuj±ce te mo¿liwo¶ci dla platform Microsoft Windows, ¿aden
+nie istnia³ dla platform PC-UNIX i X Window System. Te ma³e programy
+maj± minimaln± funkcjonalno¶æ - mbmon u¿ywany z linii poleceñ wypisuje
+temperatury, napiêcia i rpm (liczbê obrotów na minutê) wiatraczków, a
+xmbmon wy¶wietla temperatury i napiêcia jako proste krzywe.
 
 %package X11
 Summary:	Mother Board Monitor Program for X Window System
-Summary(pl):	-
+Summary(pl):	Program do monitorowania p³yty g³ównej dla X Window System
 Group:		X11/Aplications
-Requires:	XFree86-libs
 
 %description X11
-Mother Board Monitor Program for Xwindows
+Mother Board Monitor Program for X Window System.
 
 %description X11 -l pl
-- -
+Program do monitorowania p³yty g³ównej dla X Window System.
 
 %prep
-%setup -q -n "%{name}%{version}"
+%setup -q -n %{name}%{version}
 
 %build
 %{__aclocal}
@@ -53,7 +56,6 @@ Mother Board Monitor Program for Xwindows
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install mbmon $RPM_BUILD_ROOT%{_bindir}
