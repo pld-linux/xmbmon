@@ -1,12 +1,12 @@
 Summary:	Mother Board Monitor Program
 Summary(pl):	Program do monitorowania p³yty g³ównej
 Name:		xmbmon
-Version:	203
+Version:	204
 Release:	1
-License:	Freeware
+License:	BSD-like
 Group:		Tools
 Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}%{version}.tar.gz
-# Source0-md5:	f84e48b8e433170358cec840020b2419
+# Source0-md5:	68516bf34c7a624b23122ba575b579cb
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -56,22 +56,24 @@ Program do monitorowania p³yty g³ównej dla X Window System.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
+cp xmbmon.1x xmbmon.1
 install mbmon $RPM_BUILD_ROOT%{_bindir}
 install xmbmon $RPM_BUILD_ROOT%{_bindir}
-
-cp 00READMEtech.txt READMEtech.txt
-cp 00README.txt README.txt
+install mbmon.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install xmbmon.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc READMEtech.txt README.txt mbmon-rrd.pl
+%doc ReadMe ReadMe.tech ChangeLog CopyRight mbmon-rrd.pl
 %attr(755,root,root) %{_bindir}/mbmon
+%{_mandir}/man1/mbmon*
 
 %files X11
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
+%{_mandir}/man1/xmbmon*
