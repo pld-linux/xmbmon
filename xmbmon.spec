@@ -1,12 +1,12 @@
 Summary:	Mother Board Monitor Program
 Summary(pl):	Program do monitorowania p³yty g³ównej
 Name:		xmbmon
-Version:	204
+Version:	205
 Release:	1
 License:	BSD-like
 Group:		Tools
-Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}%{version}.tar.gz
-# Source0-md5:	68516bf34c7a624b23122ba575b579cb
+Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}/%{name}%{version}.tar.gz
+# Source0-md5:	ab6614c785f5b653fcc69fb9c02058f0
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
