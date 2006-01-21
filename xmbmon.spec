@@ -5,7 +5,7 @@ Version:	205
 Release:	2
 License:	BSD-like
 Group:		Tools
-Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}/%{name}%{version}.tar.gz
+Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/xmbmon/%{name}%{version}.tar.gz
 # Source0-md5:	ab6614c785f5b653fcc69fb9c02058f0
 Patch0:		%{name}-fflush.patch
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
@@ -61,11 +61,10 @@ cp -f /usr/share/automake/config.sub AC-TOOLS/
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-cp xmbmon.1x xmbmon.1
 install mbmon $RPM_BUILD_ROOT%{_bindir}
 install xmbmon $RPM_BUILD_ROOT%{_bindir}
 install mbmon.1 $RPM_BUILD_ROOT%{_mandir}/man1
-install xmbmon.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install xmbmon.1x $RPM_BUILD_ROOT%{_mandir}/man1/xmbmon.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
