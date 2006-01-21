@@ -2,11 +2,12 @@ Summary:	Mother Board Monitor Program
 Summary(pl):	Program do monitorowania p³yty g³ównej
 Name:		xmbmon
 Version:	205
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Tools
 Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/%{name}/%{name}%{version}.tar.gz
 # Source0-md5:	ab6614c785f5b653fcc69fb9c02058f0
+Patch0:		%{name}-fflush.patch
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -46,6 +47,7 @@ Program do monitorowania p³yty g³ównej dla X Window System.
 
 %prep
 %setup -q -n %{name}%{version}
+%patch0 -p0
 
 %build
 cp -f /usr/share/automake/config.sub AC-TOOLS/
