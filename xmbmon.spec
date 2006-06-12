@@ -4,7 +4,7 @@ Name:		xmbmon
 Version:	205
 Release:	2
 License:	BSD-like
-Group:		Tools
+Group:		Applications/System
 Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/xmbmon/%{name}%{version}.tar.gz
 # Source0-md5:	ab6614c785f5b653fcc69fb9c02058f0
 Patch0:		%{name}-fflush.patch
@@ -37,7 +37,7 @@ xmbmon wy¶wietla temperatury i napiêcia jako proste krzywe.
 %package X11
 Summary:	Mother Board Monitor Program for X Window System
 Summary(pl):	Program do monitorowania p³yty g³ównej dla X Window System
-Group:		X11/Aplications
+Group:		X11/Applications
 
 %description X11
 Mother Board Monitor Program for X Window System.
