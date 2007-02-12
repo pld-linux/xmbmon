@@ -1,5 +1,5 @@
 Summary:	Mother Board Monitor Program
-Summary(pl):	Program do monitorowania p≥yty g≥Ûwnej
+Summary(pl.UTF-8):   Program do monitorowania p≈Çyty g≈Ç√≥wnej
 Name:		xmbmon
 Version:	205
 Release:	2
@@ -25,25 +25,25 @@ command line reports the temperatures, voltages and rpm (rounds per
 minute) of cooling fans, and the other "xmbmon" displays the three
 temperatures and a core voltage as simple curves.
 
-%description -l pl
-Nowe p≥yty g≥Ûwne maj± funkcjonalno∂Ê monitorowania temperatur CPU,
-szybko∂ci wiatraczkÛw ch≥odz±cych CPU itp. Mimo øe powsta≥y programy
-wykorzystuj±ce te moøliwo∂ci dla platform Microsoft Windows, øaden
-nie istnia≥ dla platform PC-UNIX i X Window System. Te ma≥e programy
-maj± minimaln± funkcjonalno∂Ê - mbmon uøywany z linii poleceÒ wypisuje
-temperatury, napiÍcia i rpm (liczbÍ obrotÛw na minutÍ) wiatraczkÛw, a
-xmbmon wy∂wietla temperatury i napiÍcia jako proste krzywe.
+%description -l pl.UTF-8
+Nowe p≈Çyty g≈Ç√≥wne majƒÖ funkcjonalno≈õƒá monitorowania temperatur CPU,
+szybko≈õci wiatraczk√≥w ch≈ÇodzƒÖcych CPU itp. Mimo ≈ºe powsta≈Çy programy
+wykorzystujƒÖce te mo≈ºliwo≈õci dla platform Microsoft Windows, ≈ºaden
+nie istnia≈Ç dla platform PC-UNIX i X Window System. Te ma≈Çe programy
+majƒÖ minimalnƒÖ funkcjonalno≈õƒá - mbmon u≈ºywany z linii polece≈Ñ wypisuje
+temperatury, napiƒôcia i rpm (liczbƒô obrot√≥w na minutƒô) wiatraczk√≥w, a
+xmbmon wy≈õwietla temperatury i napiƒôcia jako proste krzywe.
 
 %package X11
 Summary:	Mother Board Monitor Program for X Window System
-Summary(pl):	Program do monitorowania p≥yty g≥Ûwnej dla X Window System
+Summary(pl.UTF-8):   Program do monitorowania p≈Çyty g≈Ç√≥wnej dla X Window System
 Group:		X11/Applications
 
 %description X11
 Mother Board Monitor Program for X Window System.
 
-%description X11 -l pl
-Program do monitorowania p≥yty g≥Ûwnej dla X Window System.
+%description X11 -l pl.UTF-8
+Program do monitorowania p≈Çyty g≈Ç√≥wnej dla X Window System.
 
 %prep
 %setup -q -n %{name}%{version}
