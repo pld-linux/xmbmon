@@ -1,5 +1,5 @@
 Summary:	Mother Board Monitor Program
-Summary(pl.UTF-8):   Program do monitorowania płyty głównej
+Summary(pl.UTF-8):	Program do monitorowania płyty głównej
 Name:		xmbmon
 Version:	205
 Release:	2
@@ -36,7 +36,7 @@ xmbmon wyświetla temperatury i napięcia jako proste krzywe.
 
 %package X11
 Summary:	Mother Board Monitor Program for X Window System
-Summary(pl.UTF-8):   Program do monitorowania płyty głównej dla X Window System
+Summary(pl.UTF-8):	Program do monitorowania płyty głównej dla X Window System
 Group:		X11/Applications
 
 %description X11
