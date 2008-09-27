@@ -9,9 +9,9 @@ Source0:	http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/xmbmon/%{name}%{vers
 # Source0-md5:	ab6614c785f5b653fcc69fb9c02058f0
 Patch0:		%{name}-fflush.patch
 URL:		http://www.nt.phys.kyushu-u.ac.jp/shimizu/download/download.html
-BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	xorg-lib-libXt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
