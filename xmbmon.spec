@@ -47,7 +47,7 @@ Program do monitorowania płyty głównej dla X Window System.
 
 %prep
 %setup -q -n %{name}%{version}
-%patch0 -p0
+%patch -P0 -p0
 
 %build
 cp -f /usr/share/automake/config.sub AC-TOOLS/
